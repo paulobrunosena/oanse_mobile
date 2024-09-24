@@ -24,16 +24,16 @@ class TextStyles {
   TextStyle get textExtraBold => const TextStyle(fontWeight: FontWeight.w800);
 
   TextStyle get textButtonLabel =>
-      textMedium.copyWith(fontSize: 18, color: Colors.white);
+      textMedium.copyWith(fontSize: 14, color: Colors.white);
 
   TextStyle get textPrimaryButtonLabel =>
-      textMedium.copyWith(fontSize: 18, color: ColorsApp.instance.primary);
+      textMedium.copyWith(fontSize: 14, color: ColorsApp.instance.primary);
 
   TextStyle get textSecondaryButtonLabel =>
-      textMedium.copyWith(fontSize: 18, color: ColorsApp.instance.secondary);
+      textMedium.copyWith(fontSize: 14, color: ColorsApp.instance.secondary);
 
   TextStyle get textTitleItemList =>
-      textMedium.copyWith(fontSize: 16, color: ColorsApp.instance.black);
+      textMedium.copyWith(fontSize: 14, color: ColorsApp.instance.black);
 
   TextStyle get textSubTitleItemList =>
       textRegular.copyWith(fontSize: 14, color: Colors.black54);

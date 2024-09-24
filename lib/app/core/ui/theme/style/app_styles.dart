@@ -25,7 +25,7 @@ class AppStyles {
 
   ButtonStyle get textButton => TextButton.styleFrom(
         textStyle: TextStyles.instance.textSecondaryButtonLabel,
-        foregroundColor: ColorsApp.instance.primary,
+        foregroundColor: ColorsApp.instance.black,
       );
 }
 

@@ -93,9 +93,9 @@ class LoginPage extends StatelessWidget {
                     onPressed: () {
                       // Ação para "Esqueci minha senha"
                     },
-                    child: const Text(
+                    child: Text(
                       'Esqueci minha senha.',
-                      style: TextStyle(color: Colors.grey),
+                      style: TextStyle(color: Colors.grey[700]),
                     ),
                   ),
                 ],
