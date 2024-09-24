@@ -19,7 +19,7 @@ class LoginPage extends StatelessWidget {
               decoration: const BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage(
-                    'images/pattern_bg.jpg',
+                    'assets/images_login/pattern_bg.jpg',
                   ), // Use a imagem como fundo
                   fit: BoxFit.cover, // Faz a imagem preencher todo o fundo
                 ),
@@ -34,7 +34,7 @@ class LoginPage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
                   Image.asset(
-                    'images/logo.png', // Logo no topo
+                    'assets/images_login/logo.png', // Logo no topo
                     height: 100,
                   ),
                   const SizedBox(height: 20),

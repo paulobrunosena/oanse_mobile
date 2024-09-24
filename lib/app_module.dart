@@ -14,4 +14,4 @@ class AppModule extends Module {
   }
 }
 
-const routeHome = '/home';
+const routeHome = '/home/';

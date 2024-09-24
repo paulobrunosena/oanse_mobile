@@ -11,12 +11,30 @@ class ClubesPage extends StatelessWidget {
       body: ListView(
         padding: const EdgeInsets.all(8.0),
         children: const [
-          ClubItem(nome: 'Ursinhos', imagem: 'images/ursinhos.png'),
-          ClubItem(nome: 'Faísca', imagem: 'images/faisca.png'),
-          ClubItem(nome: 'Flama', imagem: 'images/flama.png'),
-          ClubItem(nome: 'Tocha', imagem: 'images/tocha.png'),
-          ClubItem(nome: 'Jovens Vencedores', imagem: 'images/jovens.png'),
-          ClubItem(nome: 'VQ7', imagem: 'images/vq7.png'),
+          ClubItem(
+            nome: 'Ursinhos',
+            imagem: 'assets/icon_clubs/ursinhos.png',
+          ),
+          ClubItem(
+            nome: 'Faísca',
+            imagem: 'assets/icon_clubs/faisca.png',
+          ),
+          ClubItem(
+            nome: 'Flama',
+            imagem: 'assets/icon_clubs/flama.png',
+          ),
+          ClubItem(
+            nome: 'Tocha',
+            imagem: 'assets/icon_clubs/tocha.png',
+          ),
+          ClubItem(
+            nome: 'Jovens Vencedores',
+            imagem: 'assets/icon_clubs/jovens_vencedores.png',
+          ),
+          ClubItem(
+            nome: 'VQ7',
+            imagem: 'assets/icon_clubs/vq7.png',
+          ),
         ],
       ),
     );
