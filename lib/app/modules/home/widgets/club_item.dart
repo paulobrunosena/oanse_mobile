@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_modular/flutter_modular.dart';
+
+import '../../../../app_module.dart';
 
 class ClubItem extends StatelessWidget {
   final String nome;
@@ -19,6 +22,7 @@ class ClubItem extends StatelessWidget {
           nome,
           style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
         ),
+        onTap: () => Modular.to.pushNamed(routeClub, arguments: nome),
       ),
     );
   }
