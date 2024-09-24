@@ -14,18 +14,19 @@ class LoginPage extends StatelessWidget {
       body: Stack(
         children: [
           // Imagem de fundo
-          Container(
-            decoration: const BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage(
-                    'images/pattern_bg.jpg'), // Use a imagem como fundo
-                fit: BoxFit.cover, // Faz a imagem preencher todo o fundo
+          Positioned.fill(
+            child: Container(
+              decoration: const BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage(
+                      'images/pattern_bg.jpg'), // Use a imagem como fundo
+                  fit: BoxFit.cover, // Faz a imagem preencher todo o fundo
+                ),
               ),
             ),
           ),
-          // Conteúdo da página de login com scroll e centralização
-          SingleChildScrollView(
-            child: Padding(
+          Center(
+            child: SingleChildScrollView(
               padding: const EdgeInsets.all(16.0),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
