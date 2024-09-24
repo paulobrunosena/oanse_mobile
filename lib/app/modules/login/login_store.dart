@@ -1,6 +1,8 @@
 import 'dart:developer';
 
+import 'package:flutter_modular/flutter_modular.dart';
 import 'package:mobx/mobx.dart';
+import 'package:oanse_mobile/app_module.dart';
 
 part 'login_store.g.dart';
 
@@ -27,5 +29,6 @@ abstract class LoginStoreBase with Store {
   Future<void> login() async {
     // Lógica de autenticação usando Dio ou qualquer outra API
     log("Tentando logar com $username e $password");
+    Modular.to.pushNamed(routeHome);
   }
 }
