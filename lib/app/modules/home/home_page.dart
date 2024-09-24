@@ -55,7 +55,6 @@ class HomePage extends StatelessWidget {
           'assets/images_login/logo.png', // Logo na AppBar
           height: 40,
         ),
-        backgroundColor: Colors.white,
       ),
       drawer: Drawer(
         child: drawerItems,
@@ -67,8 +66,14 @@ class HomePage extends StatelessWidget {
             currentIndex: homeStore.selectedIndex,
             onTap: (index) => homeStore.setPage(index),
             items: const [
-              BottomNavigationBarItem(icon: Icon(Icons.group), label: 'Clubes'),
-              BottomNavigationBarItem(icon: Icon(Icons.sports), label: 'Jogos'),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.group),
+                label: 'Clubes',
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.sports),
+                label: 'Jogos',
+              ),
               BottomNavigationBarItem(
                 icon: Icon(Icons.card_giftcard),
                 label: 'Prêmios',

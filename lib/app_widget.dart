@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
+import 'app/core/ui/theme/theme_config.dart';
+
 class AppWidget extends StatelessWidget {
   const AppWidget({super.key});
 
@@ -8,7 +10,7 @@ class AppWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp.router(
       title: 'Oanse Mobile',
-      theme: ThemeData(primarySwatch: Colors.blue),
+      theme: ThemeConfig.theme,
       routerConfig: Modular.routerConfig,
     );
   }
