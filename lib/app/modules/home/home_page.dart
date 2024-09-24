@@ -7,6 +7,7 @@ import 'home_store.dart';
 import 'pages/clubes_page.dart';
 import 'pages/jogos_page.dart';
 import 'pages/premios_page.dart';
+import 'widgets/bar_item.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -65,20 +66,24 @@ class HomePage extends StatelessWidget {
       bottomNavigationBar: Observer(
         builder: (_) {
           return BottomNavigationBar(
+            selectedFontSize: 0,
+            unselectedFontSize: 0,
+            showSelectedLabels: false,
+            showUnselectedLabels: false,
             currentIndex: homeStore.selectedIndex,
             onTap: (index) => homeStore.setPage(index),
-            items: const [
+            items: [
               BottomNavigationBarItem(
-                icon: Icon(Icons.group),
-                label: 'Clubes',
+                icon: BarItem(Icons.group, 'Clubes', 0, homeStore),
+                label: '',
               ),
               BottomNavigationBarItem(
-                icon: Icon(Icons.sports),
-                label: 'Jogos',
+                icon: BarItem(Icons.sports, 'Jogos', 1, homeStore),
+                label: '',
               ),
               BottomNavigationBarItem(
-                icon: Icon(Icons.card_giftcard),
-                label: 'Prêmios',
+                icon: BarItem(Icons.card_giftcard, 'Prêmios', 2, homeStore),
+                label: '',
               ),
             ],
           );

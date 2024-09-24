@@ -60,7 +60,6 @@ class ThemeConfig {
       thickness: 0.4,
     ),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
-      backgroundColor: ColorsApp.instance.primary,
       selectedItemColor: ColorsApp.instance.black,
       selectedIconTheme: IconThemeData(color: ColorsApp.instance.black),
     ),
