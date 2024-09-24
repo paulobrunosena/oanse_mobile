@@ -9,9 +9,10 @@ class AppModule extends Module {
 
   @override
   void routes(r) {
-    r.module('/', module: LoginModule());
+    r.module(Modular.initialRoute, module: LoginModule());
     r.module(routeHome, module: HomeModule());
   }
 }
 
+const routeLogin = '/';
 const routeHome = '/home/';

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
+import '../../../app_module.dart';
 import 'home_store.dart';
 import 'pages/clubes_page.dart';
 import 'pages/jogos_page.dart';
@@ -32,19 +33,20 @@ class HomePage extends StatelessWidget {
     );
 
     final drawerItems = ListView(
-      children: const [
+      children: [
         drawerHeader,
-        ListTile(
+        const ListTile(
           leading: Icon(Icons.info),
           title: Text('Sobre'),
         ),
-        ListTile(
+        const ListTile(
           leading: Icon(Icons.edit_document),
           title: Text('Termos de uso'),
         ),
         ListTile(
-          leading: Icon(Icons.exit_to_app),
-          title: Text('Sair'),
+          leading: const Icon(Icons.exit_to_app),
+          title: const Text('Sair'),
+          onTap: () => Modular.to.pushReplacementNamed(routeLogin),
         ),
       ],
     );
