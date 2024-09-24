@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../core/global/clubs_enum.dart';
 import '../widgets/club_item.dart';
 
 class ClubesPage extends StatelessWidget {
@@ -12,30 +13,12 @@ class ClubesPage extends StatelessWidget {
         padding: EdgeInsets.all(15.0),
         child: Column(
           children: [
-            ClubItem(
-              nome: 'Ursinhos',
-              imagem: 'assets/icon_clubs/ursinhos.png',
-            ),
-            ClubItem(
-              nome: 'Faísca',
-              imagem: 'assets/icon_clubs/faisca.png',
-            ),
-            ClubItem(
-              nome: 'Flama',
-              imagem: 'assets/icon_clubs/flama.png',
-            ),
-            ClubItem(
-              nome: 'Tocha',
-              imagem: 'assets/icon_clubs/tocha.png',
-            ),
-            ClubItem(
-              nome: 'Jovens Vencedores',
-              imagem: 'assets/icon_clubs/jovens_vencedores.png',
-            ),
-            ClubItem(
-              nome: 'VQ7',
-              imagem: 'assets/icon_clubs/vq7.png',
-            ),
+            ClubItem(club: ClubsEnum.ursinhos),
+            ClubItem(club: ClubsEnum.faisca),
+            ClubItem(club: ClubsEnum.flama),
+            ClubItem(club: ClubsEnum.tocha),
+            ClubItem(club: ClubsEnum.jv),
+            ClubItem(club: ClubsEnum.vq7),
           ],
         ),
       ),
