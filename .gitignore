@@ -25,6 +25,12 @@ doc/api/
 .flutter-plugins
 .flutter-plugins-dependencies
 
+# IntelliJ related
+*.iml
+*.ipr
+*.iws
+.idea/
+
 # Flutter/Dart/Pub related
 **/doc/api/
 **/ios/Flutter/.last_build_id
