@@ -1,6 +1,7 @@
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:oanse_mobile/app/modules/home/home_module.dart';
-import 'package:oanse_mobile/app/modules/login/login_module.dart';
+
+import 'app/modules/home/home_module.dart';
+import 'app/modules/login/login_module.dart';
 
 class AppModule extends Module {
   @override

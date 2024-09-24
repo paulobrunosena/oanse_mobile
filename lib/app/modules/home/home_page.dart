@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:oanse_mobile/app/modules/home/home_store.dart';
-import 'package:oanse_mobile/app/modules/home/pages/clubes_page.dart';
-import 'package:oanse_mobile/app/modules/home/pages/jogos_page.dart';
-import 'package:oanse_mobile/app/modules/home/pages/premios_page.dart';
+
+import 'home_store.dart';
+import 'pages/clubes_page.dart';
+import 'pages/jogos_page.dart';
+import 'pages/premios_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -29,9 +30,10 @@ class HomePage extends StatelessWidget {
         ),
       ),
       body: Flexible(
-          child: PageView(
-        children: const [ClubesPage(), JogosPage(), PremiosPage()],
-      )),
+        child: PageView(
+          children: const [ClubesPage(), JogosPage(), PremiosPage()],
+        ),
+      ),
       bottomNavigationBar: Observer(
         builder: (_) {
           return BottomNavigationBar(
@@ -41,7 +43,9 @@ class HomePage extends StatelessWidget {
               BottomNavigationBarItem(icon: Icon(Icons.group), label: 'Clubes'),
               BottomNavigationBarItem(icon: Icon(Icons.sports), label: 'Jogos'),
               BottomNavigationBarItem(
-                  icon: Icon(Icons.card_giftcard), label: 'Prêmios'),
+                icon: Icon(Icons.card_giftcard),
+                label: 'Prêmios',
+              ),
             ],
           );
         },

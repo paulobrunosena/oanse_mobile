@@ -1,6 +1,7 @@
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:oanse_mobile/app/modules/home/home_page.dart';
-import 'package:oanse_mobile/app/modules/home/home_store.dart';
+
+import 'home_page.dart';
+import 'home_store.dart';
 
 class HomeModule extends Module {
   @override

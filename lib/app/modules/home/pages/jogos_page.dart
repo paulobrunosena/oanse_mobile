@@ -7,7 +7,7 @@ class JogosPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: Center(
-        child: Text("Jogos Page"),
+        child: Text('Jogos Page'),
       ),
     );
   }

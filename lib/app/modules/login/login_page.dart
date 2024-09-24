@@ -19,7 +19,8 @@ class LoginPage extends StatelessWidget {
               decoration: const BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage(
-                      'images/pattern_bg.jpg'), // Use a imagem como fundo
+                    'images/pattern_bg.jpg',
+                  ), // Use a imagem como fundo
                   fit: BoxFit.cover, // Faz a imagem preencher todo o fundo
                 ),
               ),
@@ -75,7 +76,9 @@ class LoginPage extends StatelessWidget {
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.yellow[700],
                       padding: const EdgeInsets.symmetric(
-                          vertical: 12, horizontal: 80),
+                        vertical: 12,
+                        horizontal: 80,
+                      ),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10),
                       ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:oanse_mobile/app/modules/home/widgets/club_item.dart';
+
+import '../widgets/club_item.dart';
 
 class ClubesPage extends StatelessWidget {
   const ClubesPage({super.key});
