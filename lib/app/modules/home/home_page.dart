@@ -23,12 +23,23 @@ class HomePage extends StatelessWidget {
     ];
 
     const drawerHeader = UserAccountsDrawerHeader(
-      accountName: Text('Chico Ribeiro Dias'),
+      accountName: Text(
+        'Chico Ribeiro Dias',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
       accountEmail: Text('chico@gmail.com'),
       currentAccountPicture: CircleAvatar(
         backgroundColor: Colors.white,
         child: FlutterLogo(
           size: 42,
+        ),
+      ),
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage(
+            'assets/images_login/pattern_bg.jpg',
+          ), // Imagem de fundo
+          fit: BoxFit.cover,
         ),
       ),
     );
