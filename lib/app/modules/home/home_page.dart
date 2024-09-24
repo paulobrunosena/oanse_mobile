@@ -20,6 +20,35 @@ class HomePage extends StatelessWidget {
       const PremiosPage(),
     ];
 
+    const drawerHeader = UserAccountsDrawerHeader(
+      accountName: Text('Chico Ribeiro Dias'),
+      accountEmail: Text('chico@gmail.com'),
+      currentAccountPicture: CircleAvatar(
+        backgroundColor: Colors.white,
+        child: FlutterLogo(
+          size: 42,
+        ),
+      ),
+    );
+
+    final drawerItems = ListView(
+      children: const [
+        drawerHeader,
+        ListTile(
+          leading: Icon(Icons.info),
+          title: Text('Sobre'),
+        ),
+        ListTile(
+          leading: Icon(Icons.edit_document),
+          title: Text('Termos de uso'),
+        ),
+        ListTile(
+          leading: Icon(Icons.exit_to_app),
+          title: Text('Sair'),
+        ),
+      ],
+    );
+
     return Scaffold(
       appBar: AppBar(
         title: Image.asset(
@@ -27,13 +56,9 @@ class HomePage extends StatelessWidget {
           height: 40,
         ),
         backgroundColor: Colors.white,
-        elevation: 0,
-        leading: IconButton(
-          icon: const Icon(Icons.menu, color: Colors.black),
-          onPressed: () {
-            // Ação para o botão do menu
-          },
-        ),
+      ),
+      drawer: Drawer(
+        child: drawerItems,
       ),
       body: Observer(builder: (_) => pages[homeStore.selectedIndex]),
       bottomNavigationBar: Observer(
