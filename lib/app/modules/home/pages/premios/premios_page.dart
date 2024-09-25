@@ -6,8 +6,10 @@ class PremiosPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: Center(
-        child: Text('Premios'),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [],
+        ),
       ),
     );
   }

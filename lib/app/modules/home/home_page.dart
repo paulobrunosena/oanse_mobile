@@ -4,9 +4,9 @@ import 'package:flutter_modular/flutter_modular.dart';
 
 import '../../app_module.dart';
 import 'home_store.dart';
-import 'pages/clubes_page.dart';
-import 'pages/jogos_page.dart';
-import 'pages/premios_page.dart';
+import 'pages/clubes/clubes_page.dart';
+import 'pages/jogos/jogos_page.dart';
+import 'pages/premios/premios_page.dart';
 import 'widgets/bar_item.dart';
 
 class HomePage extends StatelessWidget {

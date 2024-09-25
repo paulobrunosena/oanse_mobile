@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../core/global/clubs_enum.dart';
-import '../widgets/club_item.dart';
+import '../../../../core/global/clubs_enum.dart';
+import '../../widgets/club_item.dart';
 
 class JogosPage extends StatelessWidget {
   const JogosPage({super.key});
