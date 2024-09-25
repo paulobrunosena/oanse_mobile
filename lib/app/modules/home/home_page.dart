@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
-import '../../../app_module.dart';
+import '../../app_module.dart';
 import 'home_store.dart';
 import 'pages/clubes_page.dart';
 import 'pages/jogos_page.dart';
