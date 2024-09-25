@@ -14,34 +14,57 @@ class ClubPage extends StatefulWidget {
 class _ClubPageState extends State<ClubPage> {
   ClubsEnum get club => widget.club;
 
+  Color get colorAppBar {
+    return (club == ClubsEnum.ursinhos ||
+            club == ClubsEnum.flama ||
+            club == ClubsEnum.tocha ||
+            club == ClubsEnum.jv)
+        ? Colors.white
+        : Colors.black;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(club.name),
+        title: Text(
+          club.name,
+          style: TextStyle(color: colorAppBar),
+        ),
         backgroundColor: club.color,
+        iconTheme: IconThemeData(color: colorAppBar),
       ),
       body: SingleChildScrollView(
         child: Column(
           children: [
-            SizedBox(
-              height: 150,
-              child: Image.asset(
-                club.icon,
-                width: 50,
-              ),
-            ),
             Container(
-              height: 200,
+              height: 150,
               width: context.screenWidth,
               color: club.color,
-              child: Stack(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   SizedBox(
-                    height: 50,
+                    height: 70,
                     child: Image.asset(
                       club.icon,
-                      width: 50,
+                      width: 70,
+                    ),
+                  ),
+                  Text(
+                    'Bem-vindo(a)',
+                    style: TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w200,
+                      color: colorAppBar,
+                    ),
+                  ),
+                  Text(
+                    'Clube ${club.name}',
+                    style: TextStyle(
+                      fontSize: 17,
+                      fontWeight: FontWeight.bold,
+                      color: colorAppBar,
                     ),
                   ),
                 ],
