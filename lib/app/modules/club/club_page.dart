@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../core/extensions/size_extensions.dart';
 import '../../core/global/clubs_enum.dart';
+import 'widgets/club_option.dart';
 
 class ClubPage extends StatefulWidget {
   final ClubsEnum club;
@@ -26,52 +27,61 @@ class _ClubPageState extends State<ClubPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          club.name,
-          style: TextStyle(color: colorAppBar),
-        ),
-        backgroundColor: club.color,
-        iconTheme: IconThemeData(color: colorAppBar),
-      ),
+      appBar: _buildAppBar(),
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Container(
-              height: 150,
-              width: context.screenWidth,
-              color: club.color,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  SizedBox(
-                    height: 70,
-                    child: Image.asset(
-                      club.icon,
-                      width: 70,
-                    ),
-                  ),
-                  Text(
-                    'Bem-vindo(a)',
-                    style: TextStyle(
-                      fontSize: 14,
-                      fontWeight: FontWeight.w200,
-                      color: colorAppBar,
-                    ),
-                  ),
-                  Text(
-                    'Clube ${club.name}',
-                    style: TextStyle(
-                      fontSize: 17,
-                      fontWeight: FontWeight.bold,
-                      color: colorAppBar,
-                    ),
-                  ),
-                ],
-              ),
-            ),
+            _buildHeader(),
+            const ClubOption(text: 'Matriculados', icon: Icons.handshake),
+            const ClubOption(text: 'Visitantes', icon: Icons.person_2),
+            const ClubOption(text: 'Prêmios', icon: Icons.card_giftcard),
           ],
         ),
+      ),
+    );
+  }
+
+  AppBar _buildAppBar() {
+    return AppBar(
+      title: Text(
+        club.name,
+        style: TextStyle(color: colorAppBar),
+      ),
+      backgroundColor: club.color,
+      iconTheme: IconThemeData(color: colorAppBar),
+    );
+  }
+
+  Widget _buildHeader() {
+    return Container(
+      height: 150,
+      width: context.screenWidth,
+      color: club.color,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Image.asset(
+            club.icon,
+            width: 70,
+            height: 70,
+          ),
+          Text(
+            'Bem-vindo(a)',
+            style: TextStyle(
+              fontSize: 14,
+              fontWeight: FontWeight.w200,
+              color: colorAppBar,
+            ),
+          ),
+          Text(
+            'Clube ${club.name}',
+            style: TextStyle(
+              fontSize: 17,
+              fontWeight: FontWeight.bold,
+              color: colorAppBar,
+            ),
+          ),
+        ],
       ),
     );
   }
