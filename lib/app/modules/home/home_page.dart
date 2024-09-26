@@ -19,7 +19,7 @@ class HomePage extends StatelessWidget {
     final List<Widget> pages = [
       const ClubesPage(),
       const JogosPage(),
-      const PremiosPage(),
+      PremiosPage(),
     ];
 
     const drawerHeader = UserAccountsDrawerHeader(
