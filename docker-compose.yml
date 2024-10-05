@@ -1,0 +1,7 @@
+services:
+  flutter-web-app:
+    build:
+      context: . # Define o diretório atual como o contexto de build (onde o Dockerfile está localizado)
+    ports:
+      - "8080:80" # Mapeia a porta 8080 do host (seu computador) para a porta 80 no container (nginx)
+    restart: always # Garante que o container seja reiniciado automaticamente se ele parar
